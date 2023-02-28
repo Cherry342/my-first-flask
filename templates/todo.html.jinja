@@ -1,0 +1,68 @@
+<defs>
+<filter id="filter" filterUnits="userSpaceOnlist"><
+
+
+</filter>
+</defs>
+
+
+
+
+
+
+
+
+
+<p></p>
+<ul>
+<form>
+{%for todo in todos%}
+<li>[{todo}}</li>
+{%endfor%}
+</form>
+</ul>
+<
+
+action="/add"
+method="post"
+<textarea name="new_todo"></textarea>
+> 
+</textarea>
+<input type="submit">
+</form>
+</body>
+</html>
+
+</ul>
+
+
+
+
+
+{% block head %}
+  {% if completed %}
+    <style>
+      p {
+        margin: 8px 16px;
+        background-color: rgb(52, 0, 52);
+        padding: 12px 24px;
+        border: 1px solid rgb(255, 3, 125);
+        border-radius: 4px;
+      }
+    </style>
+  {% else %}
+    <style>
+      p {
+        margin: 8px 16px;
+        background-color: rgb(53, 215, 255);
+        color: #f8ac41;
+        padding: 12px 24px;
+        border: 1px solid rgb(0, 186, 6);
+        border-radius: 4px;
+      }
+    </style>
+    <input>
+
+  {% endif %}
+
+{% endblock %}
