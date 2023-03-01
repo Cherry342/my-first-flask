@@ -17,7 +17,7 @@
 <ul>
 <form>
 {%for todo in todos%}
-<li>[{todo}}</li>
+<li>{{todo}}</li>
 {%endfor%}
 </form>
 </ul>
@@ -66,3 +66,18 @@ method="post"
   {% endif %}
 
 {% endblock %}
+<ul>
+<form>
+{%for todo in todos%}
+<li>{{todo}}</li>
+{%endfor%}
+</form>
+</ul>
+
+<textarea name="new_todo"></textarea>
+> 
+</textarea>
+<input type="submit">
+</form>
+</body>
+</html>
