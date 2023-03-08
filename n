@@ -1,0 +1,6 @@
+app = Flask()
+
+@app.route("/")
+    posts = db.getPosts()
+
+    return rendertemplate("home.html.jinja", posts=posts)
