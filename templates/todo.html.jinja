@@ -149,6 +149,10 @@ method="post"
 <form>
 {%for todo in todos%}
     <li style= "{%if todo['complete']==1%} color: purple {%endif%}">
+      <form action="/complete" method="post"> 
+           <input name="todo_id" value="{{todo['id']}} hidden">
+           <input type="submit" value="Complete">
+      </form>
     {{todo['description']}}
     </li>
 <li>{{todo}}</li>
@@ -156,7 +160,7 @@ method="post"
 </form>
 </ul>
 <form actino="/add" method="post">
-<div class="form-group mb2">
+<div class="form-group mb-2">
 <label for="exampleTextarea">Add todo</label>
 <textarea name="new_todo " class="form-control" rows="3"></textarea>
 </div>
